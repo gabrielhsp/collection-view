@@ -12,8 +12,10 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageViewCell: UIImageView!
     @IBOutlet private weak var labelName: UILabel!
     
+    // Static attribute with .xib file name related to this ViewCell
     static let identifier = "CollectionViewCell"
     
+    // Static method to return the instance of .xib file related to this ViewCell
     static func instanceOfNib() -> UINib {
         return UINib(nibName: CollectionViewCell.identifier, bundle: Bundle.main)
     }
@@ -22,6 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
     
+    // Public methot to set the name and image of 
     func setCellData(name: String, image: UIImage) {
         self.labelName.text = name
         self.imageViewCell.image = image

@@ -11,6 +11,8 @@ import UIKit
 class FirstScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private static var cellHeight = CGFloat(200)
+    
     private lazy var characters : [Character] = [
         Character(name: "Capitã Marvel", image: #imageLiteral(resourceName: "marvel_1")),
         Character(name: "Os Vingadores", image: #imageLiteral(resourceName: "marvel_2")),
@@ -42,7 +44,7 @@ class FirstScreenViewController: UIViewController, UICollectionViewDataSource, U
             return .zero
         }
         
-        return CGSize(width: (collectionView.bounds.width / 3) - flowLayout.minimumLineSpacing, height: 200)
+        return CGSize(width: (collectionView.bounds.width / 3) - flowLayout.minimumLineSpacing, height: FirstScreenViewController.cellHeight)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,18 +65,9 @@ class FirstScreenViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let character = characters[indexPath.row]
-        let title = "Salvar"
-        let message = "Gostaria de salvar esse personagem: \(character.name)"
+        let character = characters[indexPath.item]
+        let heroDetailsViewController = HeroDetailsViewController(character: character)
         
-        self.showAlert(title: title, message: message)
-    }
-    
-    func showAlert(title: String, message: String) {
-        let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertConfirmButton = UIAlertAction(title: "Salvar", style: .default, handler: nil)
-        
-        alertViewController.addAction(alertConfirmButton)
-        self.present(alertViewController, animated: true, completion: nil)
+        self.present(heroDetailsViewController, animated: true, completion: nil)
     }
 }

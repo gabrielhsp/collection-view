@@ -17,6 +17,8 @@
 		B881B975225BB85A00F25382 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881B974225BB85A00F25382 /* Character.swift */; };
 		B881B978225BBBB800F25382 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881B976225BBBB800F25382 /* CollectionViewCell.swift */; };
 		B881B979225BBBB800F25382 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881B977225BBBB800F25382 /* CollectionViewCell.xib */; };
+		B881B97D225BDA0800F25382 /* HeroDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881B97B225BDA0800F25382 /* HeroDetailsViewController.swift */; };
+		B881B97E225BDA0800F25382 /* HeroDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B881B97C225BDA0800F25382 /* HeroDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		B881B974225BB85A00F25382 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B881B976225BBBB800F25382 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		B881B977225BBBB800F25382 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		B881B97B225BDA0800F25382 /* HeroDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewController.swift; sourceTree = "<group>"; };
+		B881B97C225BDA0800F25382 /* HeroDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +109,12 @@
 			children = (
 				B881B93C225B90FC00F25382 /* AppDelegate.swift */,
 				B881B943225B90FD00F25382 /* Assets.xcassets */,
+				B881B974225BB85A00F25382 /* Character.swift */,
 				B881B945225B90FD00F25382 /* LaunchScreen.storyboard */,
 				B881B948225B90FD00F25382 /* Info.plist */,
-				B881B96E225B912500F25382 /* FirstScreen */,
-				B881B974225BB85A00F25382 /* Character.swift */,
+				B881B96E225B912500F25382 /* FirstScreenViewController */,
 				B881B97A225BBBBC00F25382 /* CollectionViewCell */,
+				B881B97F225BDA0D00F25382 /* HeroDetailsViewController */,
 			);
 			path = DetailsApp;
 			sourceTree = "<group>";
@@ -132,13 +137,13 @@
 			path = DetailsAppUITests;
 			sourceTree = "<group>";
 		};
-		B881B96E225B912500F25382 /* FirstScreen */ = {
+		B881B96E225B912500F25382 /* FirstScreenViewController */ = {
 			isa = PBXGroup;
 			children = (
 				B881B96A225B911F00F25382 /* FirstScreenViewController.swift */,
 				B881B96B225B911F00F25382 /* FirstScreenViewController.xib */,
 			);
-			path = FirstScreen;
+			path = FirstScreenViewController;
 			sourceTree = "<group>";
 		};
 		B881B97A225BBBBC00F25382 /* CollectionViewCell */ = {
@@ -148,6 +153,15 @@
 				B881B977225BBBB800F25382 /* CollectionViewCell.xib */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		B881B97F225BDA0D00F25382 /* HeroDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B881B97B225BDA0800F25382 /* HeroDetailsViewController.swift */,
+				B881B97C225BDA0800F25382 /* HeroDetailsViewController.xib */,
+			);
+			path = HeroDetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +270,7 @@
 			files = (
 				B881B96D225B911F00F25382 /* FirstScreenViewController.xib in Resources */,
 				B881B947225B90FD00F25382 /* LaunchScreen.storyboard in Resources */,
+				B881B97E225BDA0800F25382 /* HeroDetailsViewController.xib in Resources */,
 				B881B979225BBBB800F25382 /* CollectionViewCell.xib in Resources */,
 				B881B944225B90FD00F25382 /* Assets.xcassets in Resources */,
 			);
@@ -285,6 +300,7 @@
 				B881B975225BB85A00F25382 /* Character.swift in Sources */,
 				B881B93D225B90FC00F25382 /* AppDelegate.swift in Sources */,
 				B881B978225BBBB800F25382 /* CollectionViewCell.swift in Sources */,
+				B881B97D225BDA0800F25382 /* HeroDetailsViewController.swift in Sources */,
 				B881B96C225B911F00F25382 /* FirstScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
